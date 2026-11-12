@@ -51,7 +51,7 @@ function Footer() {
           <a href="#inicio" className="footer-logo">
             <span>Talita</span>
             <strong>Nails</strong>
-            <small>BEAUTY & CARE</small>
+         
           </a>
 
           <p>
