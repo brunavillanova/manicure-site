@@ -1,0 +1,152 @@
+
+.hero {
+  min-height: 650px;
+  padding: 65px 8%;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 65px;
+  background: linear-gradient(120deg, #f8eeea, #fffaf8);
+}
+
+.hero-content {
+  max-width: 580px;
+}
+
+.hero-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9e6472;
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 5vw, 66px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #51413f;
+}
+
+.hero h1 em {
+  color: #bd8490;
+  font-weight: 400;
+}
+
+.hero-content > p {
+  color: #887775;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 25px 0 30px;
+  max-width: 440px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero-primary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #bd8490;
+  color: white;
+  padding: 16px 23px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.hero-primary:hover {
+  background: #9e6472;
+  transform: translateY(-3px);
+}
+
+.hero-secondary {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #9e6472;
+  font-size: 13px;
+}
+
+.hero-benefits {
+  display: flex;
+  gap: 25px;
+  margin-top: 45px;
+  color: #947e7a;
+  font-size: 11px;
+}
+
+.hero-visual {
+  height: 490px;
+  position: relative;
+  padding: 12px;
+  border: 1px solid #d9b8b9;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-caption {
+  position: absolute;
+  bottom: 35px;
+  left: -25px;
+  background: white;
+  padding: 17px 28px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 25px #00000010;
+}
+
+.hero-caption span {
+  font-family: "Playfair Display", serif;
+  color: #9e6472;
+  font-size: 20px;
+}
+
+.hero-caption small {
+  color: #947e7a;
+  margin-top: 5px;
+  font-size: 10px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 55px 5%;
+    gap: 30px;
+  }
+
+  .hero-visual {
+    height: 400px;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 55px 6%;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero-visual {
+    height: 350px;
+    margin: 10px 0 0 15px;
+  }
+
+  .hero-benefits {
+    flex-wrap: wrap;
+  }
+}

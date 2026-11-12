@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  /* PALETA TALITA NAILS */
+  --wine: #542B3B;
+  --wine-dark: #3D1D2A;
+  --rose: #A65F73;
+  --dusty-rose: #C58B96;
+  --champagne: #D8B88C;
+  --cream: #F2E8E8;
+
+  /* CORES COMPLEMENTARES */
+  --background: #F2E8E8;
+  --white: #FFFFFF;
+  --text: #38242D;
+  --text-light: #806B73;
+  --border: #E5D2D7;
+
+  /* FONTES */
+  --font-primary: 'DM Sans', sans-serif;
+  --font-elegant: 'Playfair Display', serif;
+
+  font-family: var(--font-primary);
+  color: var(--text);
+  background: var(--background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  min-width: 320px;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* TÍTULOS */
+h1,
+h2,
+h3 {
+  color: var(--wine);
+  font-family: var(--font-elegant);
+  font-weight: 500;
+}
+
+/* BOTÕES */
+.btn-primary {
+  background: var(--wine);
+  color: var(--white);
+  border: 1px solid var(--wine);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--wine-dark);
+  border-color: var(--wine-dark);
+}
+
+/* DESTAQUES */
+.highlight {
+  color: var(--rose);
+}
+
+.accent {
+  color: var(--champagne);
+}
+
+/* SELEÇÃO DE TEXTO */
+::selection {
+  background: var(--wine);
+  color: var(--white);
+}
+
+/* BARRA DE ROLAGEM */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--wine);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rose);
+}
