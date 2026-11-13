@@ -134,7 +134,7 @@ function Footer() {
 
           <span>
             <MapPin size={16} />
-            Localização a confirmar
+            Jundiai SP - Brasil
           </span>
 
           <a

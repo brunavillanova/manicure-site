@@ -1,10 +1,11 @@
 
 .services-section {
   padding: 100px 8%;
-  background: #fffaf8;
+  background: var(--cream);
 }
 
-.services-header {
+.services-header,
+.price-list-header {
   text-align: center;
   margin-bottom: 55px;
 }
@@ -13,32 +14,37 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #9e6472;
+  color: var(--rose);
   font-size: 10px;
   letter-spacing: 3px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.services-header h2 {
-  font-family: "Playfair Display", serif;
+.services-header h2,
+.price-list-header h2 {
+  font-family: var(--font-elegant);
   font-size: clamp(35px, 4vw, 48px);
   font-weight: 400;
   line-height: 1.25;
-  color: #51413f;
+  color: var(--wine);
 }
 
-.services-header h2 em {
-  color: #bd8490;
+.services-header h2 em,
+.price-list-header h2 em {
+  color: var(--rose);
   font-weight: 400;
 }
 
-.services-header > p {
-  color: #947e7a;
+.services-header > p,
+.price-list-header > p {
+  color: var(--text-light);
   font-size: 13px;
   margin-top: 18px;
   line-height: 1.8;
 }
+
+/* CARDS COM FOTOS */
 
 .services-grid {
   display: grid;
@@ -47,15 +53,15 @@
 }
 
 .service-card {
-  background: #fff;
-  border: 1px solid #f0e3df;
+  background: var(--white);
+  border: 1px solid var(--border);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 
 .service-card:hover {
   transform: translateY(-7px);
-  box-shadow: 0 15px 35px rgba(100, 60, 60, 0.09);
+  box-shadow: 0 15px 35px rgba(61, 29, 42, 0.09);
 }
 
 .service-image {
@@ -79,8 +85,8 @@
   position: absolute;
   bottom: 12px;
   right: 12px;
-  background: rgba(255, 250, 248, 0.95);
-  color: #9e6472;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--rose);
   padding: 8px 12px;
   font-size: 10px;
   border-radius: 2px;
@@ -91,14 +97,14 @@
 }
 
 .service-content h3 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-elegant);
   font-size: 22px;
   font-weight: 400;
-  color: #51413f;
+  color: var(--wine);
 }
 
 .service-content > p {
-  color: #947e7a;
+  color: var(--text-light);
   font-size: 11px;
   line-height: 1.8;
   margin-top: 10px;
@@ -107,7 +113,7 @@
 
 .service-divider {
   height: 1px;
-  background: #f0e3df;
+  background: var(--border);
   margin: 20px 0;
 }
 
@@ -122,26 +128,28 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  flex-shrink: 0;
 }
 
 .service-footer small {
-  color: #a18e89;
+  color: var(--text-light);
   font-size: 10px;
 }
 
 .service-footer strong {
-  font-family: "Playfair Display", serif;
-  color: #9e6472;
-  font-size: 20px;
+  font-family: var(--font-elegant);
+  color: var(--rose);
+  font-size: 18px;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .service-button {
-  border: 1px solid #bd8490;
+  border: 1px solid var(--dusty-rose);
   background: transparent;
-  color: #9e6472;
-  padding: 11px 13px;
-  font-size: 11px;
+  color: var(--wine);
+  padding: 9px 10px;
+  font-size: 10px;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -151,9 +159,150 @@
 }
 
 .service-button:hover {
-  background: #bd8490;
-  color: white;
+  background: var(--wine);
+  border-color: var(--wine);
+  color: var(--white);
 }
+
+/* TABELA DE PREÇOS */
+
+.price-list-section {
+  max-width: 1050px;
+  margin: 110px auto 0;
+}
+
+.price-list-header {
+  margin-bottom: 45px;
+}
+
+.price-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.price-category {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(61, 29, 42, 0.07);
+}
+
+.price-category-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--border);
+}
+
+.price-category-heading > span {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--wine);
+  color: var(--white);
+  border-radius: 50%;
+  font-family: var(--font-elegant);
+  font-size: 15px;
+}
+
+.price-category-heading h3 {
+  font-family: var(--font-elegant);
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--wine);
+}
+
+.price-category-heading p {
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.price-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.price-item:last-child {
+  border-bottom: none;
+}
+
+.price-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.price-item-info > strong {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.price-item-info small {
+  color: var(--text-light);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.price-item-action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.price-value {
+  color: var(--rose);
+  font-family: var(--font-elegant);
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.price-book-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--dusty-rose);
+  background: transparent;
+  color: var(--wine);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.price-book-button:hover {
+  background: var(--wine);
+  color: var(--white);
+  border-color: var(--wine);
+}
+
+/* RODAPÉ DA SEÇÃO */
 
 .services-bottom {
   display: flex;
@@ -161,28 +310,40 @@
   align-items: center;
   gap: 15px;
   margin-top: 55px;
-  color: #9e6472;
-}
-
-.services-bottom span {
-  font-size: 20px;
+  color: var(--rose);
 }
 
 .services-bottom p {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-elegant);
   font-style: italic;
   font-size: 17px;
 }
 
+/* RESPONSIVIDADE */
+
 @media (max-width: 1100px) {
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 750px) {
+  .services-section {
+    padding: 80px 6%;
+  }
+
+  .price-list-section {
+    margin-top: 80px;
+  }
+
+  .price-list-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 600px) {
   .services-section {
-    padding: 75px 6%;
+    padding: 75px 5%;
   }
 
   .services-grid {
@@ -194,20 +355,430 @@
     height: 280px;
   }
 
+  .service-content {
+    padding: 22px;
+  }
+
+  .price-category {
+    padding: 22px 18px;
+  }
+
+  .price-item {
+    gap: 8px;
+  }
+
+  .price-item-info > strong {
+    font-size: 12px;
+  }
+
+  .price-value {
+    font-size: 16px;
+  }
+
+  .price-item-action {
+    gap: 6px;
+  }
+
+  .services-bottom {
+    gap: 8px;
+    text-align: center;
+  }
+
   .services-bottom p {
     font-size: 14px;
   }
 }
-.service-footer > div {
+
+/* =====================================
+   TABELA DE VALORES - LUXURY DESIGN
+===================================== */
+
+.price-list-section {
+  position: relative;
+  max-width: 1100px;
+  margin: 115px auto 0;
+  padding: 70px 45px;
+  background:
+    radial-gradient(circle at 5% 5%, rgba(197, 139, 150, 0.13), transparent 30%),
+    radial-gradient(circle at 95% 95%, rgba(216, 184, 140, 0.16), transparent 30%),
+    #F8EFEF;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.price-list-section::before,
+.price-list-section::after {
+  content: "✦";
+  position: absolute;
+  color: rgba(166, 95, 115, 0.16);
+  font-size: 110px;
+  font-family: var(--font-elegant);
+  pointer-events: none;
+}
+
+.price-list-section::before {
+  top: 15px;
+  left: 20px;
+}
+
+.price-list-section::after {
+  bottom: 5px;
+  right: 25px;
+}
+
+.price-list-header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.price-list-header .section-label {
+  padding: 10px 20px;
+  border: 1px solid var(--dusty-rose);
+  border-radius: 30px;
+  letter-spacing: 3px;
+  background: rgba(255,255,255,.55);
+}
+
+.price-list-header h2 {
+  font-family: var(--font-elegant);
+  font-size: clamp(38px, 5vw, 55px);
+  color: var(--wine);
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+.price-list-header h2 em {
+  color: var(--rose);
+  font-style: italic;
+}
+
+.price-list-header > p {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-top: 17px;
+}
+
+/* GRID */
+
+.price-list-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  align-items: stretch;
+}
+
+/* CARDS */
+
+.price-category {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid #E8D6D9;
+  border-radius: 12px;
+  padding: 30px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(84, 43, 59, 0.06);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.price-category::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    var(--wine),
+    var(--rose),
+    var(--champagne)
+  );
+}
+
+.price-category:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(84, 43, 59, 0.12);
+}
+
+/* CATEGORY TITLE */
+
+.price-category-heading {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding-bottom: 23px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.price-category-heading > span {
+  width: 49px;
+  height: 49px;
+  min-width: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--wine), var(--wine-dark));
+  color: var(--champagne);
+  border: 1px solid rgba(216,184,140,.65);
+  border-radius: 50%;
+  font-family: var(--font-elegant);
+  font-size: 17px;
+}
+
+.price-category-heading h3 {
+  font-family: var(--font-elegant);
+  font-size: 27px;
+  font-weight: 500;
+  color: var(--wine);
+}
+
+.price-category-heading p {
+  margin-top: 5px;
+  font-size: 11px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* PRICE ROWS */
+
+.price-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 19px 5px;
+  border-bottom: 1px solid #F0E5E7;
+  transition: background .25s ease, padding .25s ease;
+}
+
+.price-item:hover {
+  background: #FCF7F7;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.price-item:last-child {
+  border-bottom: none;
+}
+
+.price-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.price-item-info > strong {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.price-item-info small {
+  color: var(--text-light);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.price-item-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   flex-shrink: 0;
 }
 
-.service-footer strong {
+.price-value {
+  color: var(--wine);
+  font-family: var(--font-elegant);
+  font-size: 20px;
+  font-weight: 500;
   white-space: nowrap;
-  font-size: 18px;
+}
+
+.price-book-button {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: #F4E6E9;
+  color: var(--wine);
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.price-book-button:hover {
+  background: var(--wine);
+  color: #FFFFFF;
+  transform: translateX(3px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 750px) {
+  .price-list-section {
+    margin-top: 80px;
+    padding: 55px 20px;
+  }
+
+  .price-list-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .price-category {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .price-item {
+    gap: 7px;
+  }
+
+  .price-item-info > strong {
+    font-size: 11px;
+  }
+
+  .price-value {
+    font-size: 16px;
+  }
+
+  .price-item-action {
+    gap: 6px;
+  }
+}
+
+/* =================================
+   ALINHAMENTO DOS CARDS DE SERVIÇOS
+================================= */
+
+.services-grid {
+  align-items: stretch;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+}
+
+.service-image {
+  height: 210px;
+  min-height: 210px;
+  flex-shrink: 0;
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  padding: 22px 14px;
+  text-align: center;
+}
+
+.service-content h3 {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.service-content > p {
+  min-height: 48px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.service-divider {
+  width: 100%;
+  margin: 16px 0;
+}
+
+.service-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin-top: auto;
+  min-height: 55px;
+  text-align: left;
+}
+
+.service-footer > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.service-footer small {
+  font-size: 9px;
+}
+
+.service-footer strong {
+  font-size: 16px;
+  white-space: normal;
+  line-height: 1.3;
 }
 
 .service-button {
-  padding: 9px 10px;
-  font-size: 10px;
+  flex-shrink: 0;
+  padding: 8px 7px;
+  font-size: 9px;
+  gap: 4px;
 }
+
+/* Ajustes para telas menores */
+
+@media (max-width: 1100px) {
+  .service-image {
+    height: 230px;
+    min-height: 230px;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-image {
+    height: 280px;
+    min-height: 280px;
+  }
+
+  .service-content {
+    padding: 22px 18px;
+  }
+
+  .service-content h3 {
+    min-height: 40px;
+  }
+
+  .service-content > p {
+    min-height: 45px;
+  }
+
+  .service-footer strong {
+    font-size: 18px;
+  }
+
+  .service-button {
+    padding: 9px 12px;
+    font-size: 10px;
+  }
+}
+
